@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ID Gas & Heating Engineer | Plumbing, Heating & Gas</title>
+  <meta name="description" content="ID Gas & Heating Engineer provides plumbing, heating and gas services in Barnsley and surrounding areas." />
+  <style>
+    :root {
+      --blue: #0f2f5f;
+      --accent: #ff7a00;
+      --light: #f7f8fb;
+      --text: #1d1d1d;
+      --muted: #5f6b7a;
+      --border: #e6e9ef;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(15, 47, 95, 0.96);
+      backdrop-filter: blur(8px);
+      color: #fff;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand img {
+      width: 54px;
+      height: 54px;
+      object-fit: cover;
+      border-radius: 12px;
+      background: white;
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 1rem;
+      letter-spacing: 0.2px;
+    }
+
+    .brand span {
+      display: block;
+      font-size: 0.88rem;
+      opacity: 0.9;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 16px;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover { color: #ffd2aa; }
+
+    .hero {
+      background: linear-gradient(135deg, #f4f8ff 0%, #ffffff 50%, #eef4ff 100%);
+      padding: 70px 0 54px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      line-height: 1.05;
+      margin: 0 0 18px;
+      color: var(--blue);
+    }
+
+    .hero p {
+      font-size: 1.08rem;
+      color: var(--muted);
+      max-width: 60ch;
+      margin-bottom: 26px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 14px 22px;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn.secondary {
+      border: 1px solid var(--border);
+      color: var(--blue);
+      background: white;
+    }
+
+    .hero-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: 0 16px 40px rgba(15, 47, 95, 0.08);
+      overflow: hidden;
+    }
+
+    .hero-card img {
+      width: 100%;
+      display: block;
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: var(--blue);
+      margin: 0 0 14px;
+    }
+
+    .section-lead {
+      color: var(--muted);
+      max-width: 70ch;
+      margin: 0 0 28px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+      background: white;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      color: var(--blue);
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 330px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: #f2f2f2;
+    }
+
+    .contact-box {
+      background: var(--blue);
+      color: white;
+      border-radius: 20px;
+      padding: 28px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .contact-box a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    footer {
+      background: #0b1f3d;
+      color: #d9e2f2;
+      text-align: center;
+      padding: 24px 20px;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container topbar">
+      <div class="brand">
+        <img src="logo.jpg" alt="ID Gas & Heating Engineer logo">
+        <div>
+          <strong>ID Gas & Heating Engineer</strong>
+          <span>Plumbing • Heating • Gas</span>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Trusted local engineer</div>
+          <h1>Reliable plumbing, heating and gas services.</h1>
+          <p>
+            Professional workmanship with a clean finish for bathrooms, heating
+            repairs, boiler servicing and general plumbing across Barnsley and
+            surrounding areas.
+          </p>
+          <div class="actions">
+            <a class="btn primary" href="#contact">Get a Free Quote</a>
+            <a class="btn secondary" href="#services">View Services</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <img src="logo.jpg" alt="ID Gas & Heating Engineer logo">
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2>About</h2>
+        <p class="section-lead">
+          ID Gas & Heating Engineer provides dependable plumbing, heating and
+          gas services with a focus on quality workmanship, neat finishes and
+          customer trust.
+        </p>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <h2>Services</h2>
+        <p class="section-lead">
+          A simple list of the main services you can offer.
+        </p>
+        <div class="cards">
+          <div class="card">
+            <h3>Bathroom plumbing</h3>
+            <p>Baths, taps, showers, fittings and tidy installation work.</p>
+          </div>
+          <div class="card">
+            <h3>Heating repairs</h3>
+            <p>Fault-finding, repairs and support to keep your system running well.</p>
+          </div>
+          <div class="card">
+            <h3>Boiler servicing</h3>
+            <p>Routine servicing and maintenance for peace of mind.</p>
+          </div>
+          <div class="card">
+            <h3>Gas work</h3>
+            <p>Safe and professional gas services from a local engineer.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="container">
+        <h2>Recent Work</h2>
+        <p class="section-lead">
+          Add your completed bathroom photos here to show the quality of your work.
+        </p>
+        <div class="cards gallery">
+          <img src="bathroom-1.jpg" alt="Bathroom installation photo 1">
+          <img src="bathroom-2.jpg" alt="Bathroom installation photo 2">
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <h2 style="color:white; margin:0;">Contact</h2>
+          <p>Phone: <a href="tel:YOURNUMBERHERE">YOURNUMBERHERE</a></p>
+          <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+          <p>Location: Barnsley and surrounding areas</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 ID Gas & Heating Engineer. All rights reserved.
+  </footer>
+</body>
+</html>
